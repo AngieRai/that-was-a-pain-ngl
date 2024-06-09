@@ -6,9 +6,8 @@
         <v-select
           label="Select category"
           :items="c.categories.map((category) => category.strCategory)"
-         
           v-model="selectedCategory"
-           @update:model-value="changeUrl(selectedCategory)"
+          @update:model-value="changeUrl(selectedCategory)"
         ></v-select>
         <v-row>
           <v-col
@@ -18,7 +17,8 @@
             v-for="meal in product.meals"
             :key="meal"
           >
-            <v-card class="pt-19">
+          <card :meal="meal"/>
+            <!-- <v-card class="pt-19">
               <v-card-title>{{ meal.strMeal }}</v-card-title>
               <v-img
                 height="200px"
@@ -26,7 +26,7 @@
                 :src="meal.strMealThumb"
                 cover
               ></v-img>
-            </v-card>
+            </v-card> -->
             <!-- <card
               :name="'sleep'"
               :image="'https://www.themealdb.com/images/media/meals/vdwloy1713225718.jpg'"

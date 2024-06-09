@@ -1,10 +1,11 @@
 <template>
   <div>
-    <v-card class="pt-19">
+    <v-card class="pt-19" height="300" hover :to="`/meals/${meal.idMeal}`">
       <v-card-title>{{ meal.strMeal }}</v-card-title>
+      <h1>{{meal.idMeal}}</h1>
       <v-img
-        height="200px"
-        :src="meal.strMeal"
+        height="200"
+        :src="meal.strMealThumb"
         cover
       ></v-img>
     </v-card>
@@ -12,7 +13,7 @@
 </template>
 
 <script setup>
-defineProps(["name","image"]);
+defineProps(["meal"]);
 </script>
 
 <style scoped>
