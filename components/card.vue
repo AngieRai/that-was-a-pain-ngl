@@ -5,7 +5,7 @@
       <h1>{{meal.idMeal}}</h1>
       <v-img
         height="200"
-        :src="meal.strMealThumb"
+        :src="meal.strMealThumb" :lazy-src="meal.strMealThumb"
         cover
       ></v-img>
     </v-card>
